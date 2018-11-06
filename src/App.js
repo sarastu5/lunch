@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import LunchList from './LunchList';
+import LunchList from './lunchList';
 
 class App extends Component {
   render() {
