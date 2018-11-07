@@ -5,21 +5,36 @@ import './style.css';
 export default class LunchList extends Component {
     render() {
         const lunchList = [
-            { name: "lunch1", address: "plaaplaa 1", menu: "kakkaa" },
-            { name: "lunch2", address: "plaaplaa2", menu: "pissaa" },
-            { name: "lunch3", address: "plaaplaa2", menu: "jotain" }
+            {
+                name: "Bangkok9",
+                address: "Forum",
+                menu: ["CHOO CHEE CURRY", "PHAD THAI GAI", "GANG KIEW WAN NEUA", "PLASALMON TOD KOP PADTAKRAI", "KHAO RAT GAENG"]
+            },
+
+            {
+                name: "Tamarin",
+                address: "Forum",
+                menu: ["Kanabiittejä"]
+            },
+
+            { 
+                name: "Kiila", 
+                address: "Lähellä", 
+                menu: ["Burgeria"] 
+            }
         ];
         return (
-            <div>
+            <div className="container">
                 {/* TODO: tee hienon näköinen */}
                 {/* TODO: muuta menu listaksi, jossa on monta juttua */}
                 {/* TODO: käyttöliittymä: nappi */}
-                <h1>Lounaspaikkoja</h1>
+                <h1 className="title">Missä syödään?</h1>
+                <button type="button" class="btn btn-primary" className="addLunch">Arvo paikka!</button>
                 {lunchList.map(function (lunchPlace) {
-                        return (
-                            <LunchPlace name={lunchPlace.name} address={lunchPlace.address} menu={lunchPlace.menu} />
-                        )
-                    }
+                    return (
+                        <LunchPlace name={lunchPlace.name} address={lunchPlace.address} menu={lunchPlace.menu} />
+                    )
+                }
                 )}
             </div>
         );
